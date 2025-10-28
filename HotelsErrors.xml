@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:noNamespaceSchemaLocation="Hotels.xsd">
+<Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="Hotels.xsd">
 
-  <!-- Name elements; Also missing Phone for this hotel -->
+  <!-- Hotel #1 -->
   <Hotel Rating="4.2">
     <Name>Westin</Name>
     <Name>Westin Duplicate</Name>
@@ -13,12 +13,12 @@
       <State>AZ</State>
       <Zip>85281</Zip>
     </Address>
+
   </Hotel>
 
-  <!-- Required attribute NearestAirport missing -->
+  <!-- Hotel #2 -->
   <Hotel Rating="4.5">
     <Name>Hyatt Regency Phoenix</Name>
-    <Phone>602-252-1234</Phone>
     <Address>
       <Number>122</Number>
       <Street>N 2nd St</Street>
@@ -26,9 +26,11 @@
       <State>AZ</State>
       <Zip>85004</Zip>
     </Address>
+
+    <Phone>602-252-1234</Phone>
   </Hotel>
 
-  <!-- Address element has no closing tag -->
+  <!-- Hotel #3 -->
   <Hotel>
     <Name>AC Hotel Phoenix Tempe/Downtown</Name>
     <Phone>480-642-6140</Phone>
@@ -37,7 +39,8 @@
       <Street>E Rio Salado Pkwy</Street>
       <City>Tempe</City>
       <State>AZ</State>
-      <Zip>85281</Zip>
+      <Zip>85A81</Zip>
+    </Address>
   </Hotel>
 
-</Hotel>
+</Hotels>
