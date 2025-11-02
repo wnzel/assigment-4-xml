@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="Hotels.xsd">
-
+<Hotels
+    xmlns="https://wnzel.github.io/assigment-4-xml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://wnzel.github.io/assigment-4-xml Hotels.xsd">
   <Hotel Rating="4.2">
     <Name>Westin</Name>
     <Phone>480-968-8885</Phone>
@@ -14,7 +15,6 @@
       <Zip>85281</Zip>
     </Address>
   </Hotel>
-
   <Hotel Rating="4.5">
     <Name>Hyatt Regency Phoenix</Name>
     <Phone>602-252-1234</Phone>
@@ -26,7 +26,6 @@
       <Zip>85004</Zip>
     </Address>
   </Hotel>
-
   <Hotel>
     <Name>FOUND:RE Phoenix</Name>
     <Phone>602-875-8000</Phone>
@@ -38,7 +37,6 @@
       <Zip>85003</Zip>
     </Address>
   </Hotel>
-
   <Hotel Rating="4.6">
     <Name>The Phoenician</Name>
     <Phone>480-941-8200</Phone>
@@ -50,7 +48,6 @@
       <Zip>85251</Zip>
     </Address>
   </Hotel>
-
   <Hotel>
     <Name>Hotel Valley Ho</Name>
     <Phone>480-376-2600</Phone>
@@ -62,7 +59,6 @@
       <Zip>85251</Zip>
     </Address>
   </Hotel>
-
   <Hotel Rating="4.1">
     <Name>Omni Tempe Hotel at ASU</Name>
     <Phone>480-527-0000</Phone>
@@ -74,7 +70,6 @@
       <Zip>85281</Zip>
     </Address>
   </Hotel>
-
   <Hotel>
     <Name>AC Hotel Phoenix Tempe/Downtown</Name>
     <Phone>480-642-6140</Phone>
@@ -86,7 +81,6 @@
       <Zip>85281</Zip>
     </Address>
   </Hotel>
-
   <Hotel Rating="4.0">
     <Name>Graduate Tempe</Name>
     <Phone>480-967-9431</Phone>
@@ -98,7 +92,6 @@
       <Zip>85281</Zip>
     </Address>
   </Hotel>
-
   <Hotel>
     <Name>Kimpton Hotel Palomar Phoenix</Name>
     <Phone>602-253-6633</Phone>
@@ -110,7 +103,6 @@
       <Zip>85004</Zip>
     </Address>
   </Hotel>
-
   <Hotel Rating="3.9">
     <Name>Hilton Phoenix Resort at the Peak</Name>
     <Phone>602-997-2626</Phone>
@@ -122,7 +114,6 @@
       <Zip>85020</Zip>
     </Address>
   </Hotel>
-
   <Hotel>
     <Name>Arizona Grand Resort &amp; Spa</Name>
     <Phone>602-438-9000</Phone>
@@ -134,5 +125,4 @@
       <Zip>85044</Zip>
     </Address>
   </Hotel>
-
 </Hotels>
