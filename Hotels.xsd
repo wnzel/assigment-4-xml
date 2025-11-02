@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
-  <!-- Root element -->
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="https://wnzel.github.io/assigment-4-xml"
+    targetNamespace="https://wnzel.github.io/assigment-4-xml"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+
   <xs:element name="Hotels">
     <xs:complexType>
       <xs:sequence>
@@ -8,6 +13,7 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" type="xs:string"/>
+              <!-- flat, multiple Phone elements -->
               <xs:element name="Phone" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
               <xs:element name="Address">
                 <xs:complexType>
@@ -28,4 +34,5 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
 </xs:schema>
