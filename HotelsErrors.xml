@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Root element is Hotel (should be Hotels) -->
 <Hotel
   xmlns="https://wnzel.github.io"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
