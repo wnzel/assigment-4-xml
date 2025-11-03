@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns="https://wnzel.github.io/assigment-4-xml"
-    targetNamespace="https://wnzel.github.io/assigment-4-xml"
-    elementFormDefault="qualified"
-    attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="https://wnzel.github.io"
+            targetNamespace="https://wnzel.github.io"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
 
-  <xs:element name="Hotels">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="Hotel" maxOccurs="unbounded">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Name" type="xs:string"/>
-              <!-- flat, multiple Phone elements -->
-              <xs:element name="Phone" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
-              <xs:element name="Address">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="Number" type="xs:int"/>
-                    <xs:element name="Street" type="xs:string"/>
-                    <xs:element name="City" type="xs:string"/>
-                    <xs:element name="State" type="xs:string"/>
-                    <xs:element name="Zip" type="xs:int"/>
-                  </xs:sequence>
-                  <xs:attribute name="NearestAirport" type="xs:string" use="required"/>
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-            <xs:attribute name="Rating" type="xs:string" use="optional"/>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+  <xsd:element name="Hotels">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Hotel" type="HotelType" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
 
-</xs:schema>
+  <xsd:complexType name="HotelType">
+    <xsd:sequence>
+      <xsd:element name="Name"   type="xsd:string"/>
+      <xsd:element name="Phone"  type="xsd:string" maxOccurs="unbounded"/>
+      <xsd:element name="Address" type="AddressType"/>
+    </xsd:sequence>
+    <xsd:attribute name="Rating" type="xsd:decimal" use="optional"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="AddressType">
+    <xsd:sequence>
+      <xsd:element name="Number" type="xsd:string"/>
+      <xsd:element name="Street" type="xsd:string"/>
+      <xsd:element name="City"   type="xsd:string"/>
+      <xsd:element name="State"  type="xsd:string"/>
+      <xsd:element name="Zip"    type="xsd:string"/>
+    </xsd:sequence>
+    <xsd:attribute name="NearestAirport" type="xsd:string" use="required"/>
+  </xsd:complexType>
+
+</xsd:schema>
