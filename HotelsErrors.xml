@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Hotels
-    xmlns="https://wnzel.github.io/assigment-4-xml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://wnzel.github.io/assigment-4-xml Hotels.xsd">
-  <!-- Hotel #1: duplicate Name + missing Phone -->
+<!-- Root element is Hotel (should be Hotels) -->
+<Hotel
+  xmlns="https://wnzel.github.io"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://wnzel.github.io Hotels.xsd">
+
+  <!-- Duplicate Name + missing Phone -->
   <Hotel Rating="4.2">
     <Name>Westin</Name>
     <Name>Westin Duplicate</Name>
@@ -14,10 +16,9 @@
       <State>AZ</State>
       <Zip>85281</Zip>
     </Address>
-    <!-- no <Phone> -->
   </Hotel>
 
-  <!-- Hotel #2: Address before Phone + missing NearestAirport -->
+  <!-- Address before Phone (sequence violation) + missing required NearestAirport -->
   <Hotel Rating="4.5">
     <Name>Hyatt Regency Phoenix</Name>
     <Address>
@@ -30,7 +31,7 @@
     <Phone>602-252-1234</Phone>
   </Hotel>
 
-  <!-- Hotel #3: bad Zip type -->
+  <!-- Bad Zip type (letters) -->
   <Hotel>
     <Name>AC Hotel Phoenix Tempe/Downtown</Name>
     <Phone>480-642-6140</Phone>
@@ -42,4 +43,5 @@
       <Zip>85A81</Zip>
     </Address>
   </Hotel>
-</Hotels>
+
+</Hotel>
