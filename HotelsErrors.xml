@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- HotelsErrors.xml: copy of Hotels.xml but with 5 injected errors -->
 <Hotel
   xmlns="https://wnzel.github.io"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="https://wnzel.github.io Hotels.xsd">
 
-  <!-- Duplicate Name + missing Phone -->
+  <!-- (5) two names provided + (valid otherwise) -->
   <Hotel Rating="4.2">
-    <Name>Westin</Name>
-    <Name>Westin Duplicate</Name>
+    <Name>Westin Tempe</Name>
+    <Name>Westin Tempe Duplicate</Name>
+    <Phone>480-968-8885</Phone>
+    <Phone>800-937-8461</Phone>
     <Address NearestAirport="Sky Harbor">
       <Number>11</Number>
       <Street>E 7th St</Street>
@@ -17,9 +20,10 @@
     </Address>
   </Hotel>
 
-  <!-- Address before Phone (sequence violation) + missing required NearestAirport -->
+  <!-- (2) required attribute missing: Address has NO NearestAirport -->
   <Hotel Rating="4.5">
     <Name>Hyatt Regency Phoenix</Name>
+    <Phone>602-252-1234</Phone>
     <Address>
       <Number>122</Number>
       <Street>N 2nd St</Street>
@@ -27,19 +31,114 @@
       <State>AZ</State>
       <Zip>85004</Zip>
     </Address>
-    <Phone>602-252-1234</Phone>
   </Hotel>
 
-  <!-- Bad Zip type (letters) -->
-  <Hotel>
+  <!-- (3) Phone element missing -->
+  <Hotel Rating="4.0">
     <Name>AC Hotel Phoenix Tempe/Downtown</Name>
-    <Phone>480-642-6140</Phone>
     <Address NearestAirport="Sky Harbor">
       <Number>100</Number>
       <Street>E Rio Salado Pkwy</Street>
       <City>Tempe</City>
       <State>AZ</State>
-      <Zip>85A81</Zip>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- (4) Address element has no closing tag -->
+  <Hotel Rating="4.1">
+    <Name>FOUND:RE Phoenix</Name>
+    <Phone>602-875-8000</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>1100</Number>
+      <Street>N Central Ave</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85003</Zip>
+  </Hotel>
+
+  <Hotel Rating="4.7">
+    <Name>The Phoenician</Name>
+    <Phone>480-941-8200</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>6000</Number>
+      <Street>E Camelback Rd</Street>
+      <City>Scottsdale</City>
+      <State>AZ</State>
+      <Zip>85251</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="4.3">
+    <Name>Hotel Valley Ho</Name>
+    <Phone>480-376-2600</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>6850</Number>
+      <Street>E Main St</Street>
+      <City>Scottsdale</City>
+      <State>AZ</State>
+      <Zip>85251</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel>
+    <Name>Sheraton Phoenix Downtown</Name>
+    <Phone>602-262-2500</Phone>
+    <Phone>800-325-3535</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>340</Number>
+      <Street>N 3rd St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="4.1">
+    <Name>Renaissance Phoenix Downtown Hotel</Name>
+    <Phone>602-333-0000</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>100</Number>
+      <Street>N 1st St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="4.2">
+    <Name>Arizona Grand Resort &amp; Spa</Name>
+    <Phone>602-438-9000</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>8000</Number>
+      <Street>S Arizona Grand Pkwy</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85044</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="4.0">
+    <Name>Tempe Mission Palms Hotel</Name>
+    <Phone>480-894-1400</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>60</Number>
+      <Street>E 5th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="3.9">
+    <Name>Hilton Phoenix Airport</Name>
+    <Phone>480-894-1600</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>2435</Number>
+      <Street>S 47th St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85034</Zip>
     </Address>
   </Hotel>
 
