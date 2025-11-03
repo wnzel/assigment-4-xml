@@ -4,8 +4,9 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="https://wnzel.github.io Hotels.xsd">
 
+  <!-- 1 -->
   <Hotel Rating="4.2">
-    <Name>Westin</Name>
+    <Name>Westin Tempe</Name>
     <Phone>480-968-8885</Phone>
     <Phone>800-937-8461</Phone>
     <Address NearestAirport="Sky Harbor">
@@ -17,6 +18,7 @@
     </Address>
   </Hotel>
 
+  <!-- 2 -->
   <Hotel Rating="4.5">
     <Name>Hyatt Regency Phoenix</Name>
     <Phone>602-252-1234</Phone>
@@ -29,7 +31,8 @@
     </Address>
   </Hotel>
 
-  <Hotel>
+  <!-- 3 -->
+  <Hotel Rating="4.0">
     <Name>AC Hotel Phoenix Tempe/Downtown</Name>
     <Phone>480-642-6140</Phone>
     <Address NearestAirport="Sky Harbor">
@@ -40,4 +43,110 @@
       <Zip>85281</Zip>
     </Address>
   </Hotel>
+
+  <!-- 4 -->
+  <Hotel Rating="4.1">
+    <Name>FOUND:RE Phoenix</Name>
+    <Phone>602-875-8000</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>1100</Number>
+      <Street>N Central Ave</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85003</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- 5 -->
+  <Hotel Rating="4.7">
+    <Name>The Phoenician</Name>
+    <Phone>480-941-8200</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>6000</Number>
+      <Street>E Camelback Rd</Street>
+      <City>Scottsdale</City>
+      <State>AZ</State>
+      <Zip>85251</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- 6 -->
+  <Hotel Rating="4.3">
+    <Name>Hotel Valley Ho</Name>
+    <Phone>480-376-2600</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>6850</Number>
+      <Street>E Main St</Street>
+      <City>Scottsdale</City>
+      <State>AZ</State>
+      <Zip>85251</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- 7 -->
+  <Hotel>
+    <Name>Sheraton Phoenix Downtown</Name>
+    <Phone>602-262-2500</Phone>
+    <Phone>800-325-3535</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>340</Number>
+      <Street>N 3rd St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- 8 -->
+  <Hotel Rating="4.1">
+    <Name>Renaissance Phoenix Downtown Hotel</Name>
+    <Phone>602-333-0000</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>100</Number>
+      <Street>N 1st St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- 9 -->
+  <Hotel Rating="4.2">
+    <Name>Arizona Grand Resort &amp; Spa</Name>
+    <Phone>602-438-9000</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>8000</Number>
+      <Street>S Arizona Grand Pkwy</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85044</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- 10 -->
+  <Hotel Rating="4.0">
+    <Name>Tempe Mission Palms Hotel</Name>
+    <Phone>480-894-1400</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>60</Number>
+      <Street>E 5th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- 11 -->
+  <Hotel Rating="3.9">
+    <Name>Hilton Phoenix Airport</Name>
+    <Phone>480-894-1600</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>2435</Number>
+      <Street>S 47th St</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85034</Zip>
+    </Address>
+  </Hotel>
+
 </Hotels>
