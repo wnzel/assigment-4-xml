@@ -1,36 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns="https://wnzel.github.io"
-            targetNamespace="https://wnzel.github.io"
-            elementFormDefault="qualified"
-            attributeFormDefault="unqualified">
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="https://wnzel.github.io"
+    targetNamespace="https://wnzel.github.io"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
 
-  <xsd:element name="Hotels">
-    <xsd:complexType>
-      <xsd:sequence>
-        <xsd:element name="Hotel" type="HotelType" maxOccurs="unbounded"/>
-      </xsd:sequence>
+    <!-- root: <Hotels> -->
+    <xsd:element name="Hotels">
+        <xsd:complexType>
+            <xsd:sequence>
+                <!-- many <Hotel> ... -->
+                <xsd:element name="Hotel" type="HotelType" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- one hotel -->
+    <xsd:complexType name="HotelType">
+        <xsd:sequence>
+            <!-- 1) Name -->
+            <xsd:element name="Name" type="xsd:string"/>
+
+            <!-- 2) one or more Phone -->
+            <xsd:element name="Phone" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+
+            <!-- 3) Address -->
+            <xsd:element name="Address" type="AddressType"/>
+        </xsd:sequence>
+
+        <!-- hotel rating -->
+        <xsd:attribute name="Rating" type="xsd:decimal" use="optional"/>
     </xsd:complexType>
-  </xsd:element>
 
-  <xsd:complexType name="HotelType">
-    <xsd:sequence>
-      <xsd:element name="Name"   type="xsd:string"/>
-      <xsd:element name="Phone"  type="xsd:string" maxOccurs="unbounded"/>
-      <xsd:element name="Address" type="AddressType"/>
-    </xsd:sequence>
-    <xsd:attribute name="Rating" type="xsd:decimal" use="optional"/>
-  </xsd:complexType>
+    <!-- address -->
+    <xsd:complexType name="AddressType">
+        <xsd:sequence>
+            <xsd:element name="Number" type="xsd:string"/>
+            <xsd:element name="Street" type="xsd:string"/>
+            <xsd:element name="City"   type="xsd:string"/>
+            <xsd:element name="State"  type="xsd:string"/>
+            <xsd:element name="Zip"    type="xsd:string"/>
+        </xsd:sequence>
 
-  <xsd:complexType name="AddressType">
-    <xsd:sequence>
-      <xsd:element name="Number" type="xsd:string"/>
-      <xsd:element name="Street" type="xsd:string"/>
-      <xsd:element name="City"   type="xsd:string"/>
-      <xsd:element name="State"  type="xsd:string"/>
-      <xsd:element name="Zip"    type="xsd:string"/>
-    </xsd:sequence>
-    <xsd:attribute name="NearestAirport" type="xsd:string" use="required"/>
-  </xsd:complexType>
+        <xsd:attribute name="NearestAirport" type="xsd:string" use="required"/>
+    </xsd:complexType>
 
 </xsd:schema>
